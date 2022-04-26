@@ -108,62 +108,18 @@
                   </button>
                 </li>
 
-                <li class="dropdown">
-                  <a
-                    class="css-pointer dropdown-toggle"
-                    data-toggle="dropdown"
-                    role="button"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                    ><i class="fa fa-shopping-cart fsc pull-left"></i
-                    ><span class="cart-number">3</span
-                    ><span class="caret"></span
-                  ></a>
-                  <div class="cart-content dropdown-menu">
-                    <div class="cart-title">
-                      <h4>Shopping Cart</h4>
-                    </div>
-                    <div class="cart-items">
-                      <div class="cart-item clearfix">
-                        <div class="cart-item-image">
-                          <a href="shop_single_full.html"
-                            ><img
-                              src="img/cart-img1.jpg"
-                              alt="Breakfast with coffee"
-                          /></a>
-                        </div>
-                        <div class="cart-item-desc">
-                          <a href="shop_single_full.html"
-                            >Breakfast with coffee</a
-                          >
-                          <span class="cart-item-price">$19.99</span>
-                          <span class="cart-item-quantity">x 2</span>
-                          <i class="fa fa-times ci-close"></i>
-                        </div>
-                      </div>
-                      <div class="cart-item clearfix">
-                        <div class="cart-item-image">
-                          <a href="shop_single_full.html"
-                            ><img src="img/cart-img2.jpg" alt="Chicken stew"
-                          /></a>
-                        </div>
-                        <div class="cart-item-desc">
-                          <a href="shop_single_full.html">Chicken stew</a>
-                          <span class="cart-item-price">$24.99</span>
-                          <span class="cart-item-quantity">x 3</span>
-                          <i class="fa fa-times ci-close"></i>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="cart-action clearfix">
-                      <span class="pull-left checkout-price">$ 114.95</span>
-                      <a
-                        class="btn btn-default pull-right"
-                        href="shop_cart.html"
-                        >View Cart</a
-                      >
-                    </div>
-                  </div>
+                <li style="padding-top: 15px; padding-left: 0px">
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-toggle="modal"
+                    data-target="#cart"
+                  >
+                    <i class="fa fa-shopping-cart fsc pull-left"></i> (<span
+                      class="total-count"
+                    ></span
+                    >)
+                  </button>
                 </li>
               </ul>
             </div>
@@ -216,9 +172,7 @@
               </div>
               <div class="row menu-items4">
                 <!--    biryani-->
-                <div
-                  class="menu-item4 col-sm-3 col-xs-12 biryani dinner desserts"
-                >
+                <div class="menu-item4 col-sm-3 col-xs-12 biryani">
                   <div class="menu-info">
                     <img
                       src="img/menu/3/chiken-salad.jpeg"
@@ -230,9 +184,15 @@
                         <h4>Biryani</h4>
                         <p>Chicken Biryani with Raita and salad</p>
                         <span class="price">$ 13.99</span>
-                        <button type="button" class="btn btn-info">
-                          Add Cart
-                        </button>
+                        <!--cart link-->
+                        <a
+                          href="#"
+                          data-name="Chicken_Biryani"
+                          data-price="5"
+                          class="add-to-cart btn btn-primary text-white"
+                          >Add cart</a
+                        >
+                        <!--end-->
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <button type="button" class="btn btn-success">
                           <a href="shop_cart.html" style="color: inherit"
@@ -255,9 +215,15 @@
                         <h4>Biryani</h4>
                         <p>Lamb/Goat Biryani with Raita and salad</p>
                         <span class="price">$ 17.99</span>
-                        <button type="button" class="btn btn-info">
-                          Add Cart
-                        </button>
+                        <!--cart link-->
+                        <a
+                          href="#"
+                          data-name="Goat_Biryani"
+                          data-price="17"
+                          class="add-to-cart btn btn-primary text-white"
+                          >Add cart</a
+                        >
+                        <!--end-->
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <button type="button" class="btn btn-success">
                           <a href="shop_cart.html" style="color: inherit"
@@ -268,9 +234,7 @@
                     </a>
                   </div>
                 </div>
-                <div
-                  class="menu-item4 col-sm-3 col-xs-12 breakfast desserts biryani"
-                >
+                <div class="menu-item4 col-sm-3 col-xs-12 biryani">
                   <div class="menu-info">
                     <a href="menu_grid.html">
                       <img
@@ -322,7 +286,7 @@
                 </div>
 
                 <!--    curry combo-->
-                <div class="menu-item4 col-sm-3 col-xs-12 lunch starter curry">
+                <div class="menu-item4 col-sm-3 col-xs-12 curry">
                   <div class="menu-info">
                     <a href="menu_grid.html">
                       <img
@@ -375,7 +339,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="menu-item4 col-sm-3 col-xs-12 lunch starter curry">
+                <div class="menu-item4 col-sm-3 col-xs-12 curry">
                   <div class="menu-info">
                     <a href="menu_grid.html">
                       <img
@@ -400,7 +364,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="menu-item4 col-sm-3 col-xs-12 lunch starter curry">
+                <div class="menu-item4 col-sm-3 col-xs-12 curry">
                   <div class="menu-info">
                     <a href="menu_grid.html">
                       <img
@@ -425,7 +389,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="menu-item4 col-sm-3 col-xs-12 lunch starter curry">
+                <div class="menu-item4 col-sm-3 col-xs-12 curry">
                   <div class="menu-info">
                     <a href="menu_grid.html">
                       <img
@@ -450,7 +414,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="menu-item4 col-sm-3 col-xs-12 lunch starter curry">
+                <div class="menu-item4 col-sm-3 col-xs-12 curry">
                   <div class="menu-info">
                     <a href="menu_grid.html">
                       <img
@@ -478,7 +442,7 @@
                     </a>
                   </div>
                 </div>
-                <div class="menu-item4 col-sm-3 col-xs-12 lunch starter curry">
+                <div class="menu-item4 col-sm-3 col-xs-12 curry">
                   <div class="menu-info">
                     <a href="menu_grid.html">
                       <img
@@ -576,7 +540,7 @@
                           vegetable, chickpeas or lentil)
                         </p>
                         <span class="price">$ 11.99</span>
-                        <button type="button" class="btn btn-info">
+                        <button type="button" class="btn btn-info mt-auto">
                           Add Cart
                         </button>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -1254,6 +1218,48 @@
           </div>
         </section>
 
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="cart"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <table class="show-cart table"></table>
+                <div>Total price: $<span class="total-cart"></span></div>
+              </div>
+              <div class="modal-footer">
+                <button class="clear-cart btn btn-danger">Clear Cart</button>
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button" class="btn btn-primary">Order now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END EDMO HTML (Happy Coding!)-->
+
         <section class="footer">
           <div class="container">
             <div class="row">
@@ -1401,5 +1407,7 @@
     <script src="js/main.js"></script>
     <script src="js/vendor/mc/jquery.ketchup.all.min.js"></script>
     <script src="js/vendor/mc/main.js"></script>
+
+    <script src="./js/script.js"></script>
   </body>
 </html>
